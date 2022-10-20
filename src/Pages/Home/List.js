@@ -11,7 +11,7 @@ const List = () => {
 
                             <div className='align-items-center'>
 
-                                <h1 class='text-light fw-bold text-2xl'>Buy and Sell Mobile Devices</h1>
+                                <h1 class='text-light fw-bold text-2xl'>Buy And Sell Mobile Devices</h1>
 
                                 <br />
                                 <div>

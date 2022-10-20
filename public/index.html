@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAJxklEQVR4nNWcf4hdRxXHP7ksjyXUZQkxtMuyLEGkhCWGJZRQQ11CkRKKiJRQRPqHf4SgRaJ/lCKlUKSGUrCIlFJKKPuHSClFYgltkVBDiSGIIsRYf8U03ca42CTNpmlMk03847zxzTv3nJm597234oFhz7v3e2fOmTvnx/y4uw6ogFvqL4rXv617qGsWpeqwaAyYBuaBLwB3A7PAncAkMA58CvwC+DbwUaa+VlRFglZOibEeX6nrqTpS+HHgfuB54F3gBnC7oLyc0cFqswhvvUUtdI7XzzXlK2Az8DSwRFmH6HJeyTUs2eo/UsDEtTZUAVuAReAa7TomlBNDkskUMvy1hmJJKcFqzCTwHHCVwTrmNnAZWFBtNJXJxK+LbniOOr7v8aX48Pth4BnEAZfSReAD4G/A34F/AZ8gjvlX3XtxGyWylOD7QG0pZ5Lh+gTwErBK2cg4DjwJ7AQ2DChja0qZgYfVuJLhOgecJN8p5xBnfXemXotPydkWn3TQ1rU2DnwnsEy6Y5aA/YhvKml7DLiD8shVUqc7QtsOXettaPoK4kS9jrmGOOsNzvMdJNJ9CzgIvIN05oVuvaeQvGlk5jdIFMPg42u7SIfvk8A9Tt1zwAHgr4nnQ7mEZNcDRSwHnzSxnJ2mBNiORBpPqZ/S73jDs/PAa8D1go6Jy4P8H9E0fka8CjyF+JCYppAI1zYX2jYqZZLDy8BZfHytA7yB3zn7jfZ2I9Grbee8iHR4zmzaFFPpuFOa8k8mOudxhe908SUT0hvAWeAQ8CzwGLAPuI/6aBw5FYU+A7MVf+rwY+qd84KDjcu7wPe7da95R4BvOvHv0nIEW8l3gPVRnWOIWaQ65hSwB1n+GIXpFJsYMZPopBSuAr7uKLqMLGXE2KcTHXMVeCLqGE/GDjJ1mUjIp3lLtxx+KLQeeeOWwnsV9qv4c7ElJOu2AkAHSQifAY4CZ5DOX0ZShknsjkgpWYTXoDbFGz3H6PmNChlJ3pTjFL2RFgs8iTjk3ELaoqFgznUU4a3opR+0rsWVnTAEXgUWIswY8Iqj3BlkrVm39VD3XkmoDyuKWqecj83hB6Z5R+Aj9EedL2Ob1uVuHTF1kKhXuixym/4VRc+3eJTEW14759Xj3885Au9WuGMObq+qdz3+SPPKJfpHq1Y2p0sKn41gHgXHedoQ+Gz3XqAF7NHwdoQLbR00cNp0TyAvZj/wDWDGUG6YfGuax86CD0SYCviZgVmlblp7DVwo15DEcvOgQjclK6SmhmZ8/TvYyuyIcBuRtRuNOazqncWf/Z9BphSlb54CTDG+1GNbFVm+YpneSh/A1xylH1Rte9OO09QjnFamVP5B8O5ND9TBTg5fV888b2DOIRlwoDux53BXEDNs6g+Ghh/zbtC/nWNh1mO/2d+rZ+41ML8GPo5wD9Gbq8X0o259ehvG2+OPt66Ghe+7EXhvKMb857BN4mGFt5ZcH1WYtwzMJcR/pWQYOR/3GBGvf1v8FDa9H/HTyKRT058ifox6NAN4E9ks/K+wBkbLlvMxjfHBxEqOomiydiFuIjudoc5NjpDvR5hp+v1RoKPYJuDt5DIK/Ji6EVPumuUzbgL/jhq5w8DcAlYizCT2Qth7lsAJnlHgx6h3QqxI6tpN437oIN2YrmMl4jsO7qJqz+K1jCPBpxJBq4T704gjjR3rUYWboJ78vaXq24Ht7MMOq+UncrINE18cwTRVwANILnQdUXzWeHYB2SC8jux2zCiM10ETEUYLvtb8/5RyHRRoCpmeXEM6fJdRV4WsY5/u4l5FktCBSA+1lHmlzLHJs3HbXgdtUHW+ru4v0x8lK+xdlVcSbWdl1kMoePU4F0rxOHxJHpWjz0f8JPWMfBO93dQg9wL16Bpf8w5SuTqOYSscd1RFmdJWoyX4eN0IA3cLUdBKOLXsVlqhQ3sj3pqLpY6uufmC+us9H/MBv9lQCuDDqI0Odkd+rOT/jIH5VMnbiOKHcsM/N0LiTvI61MJ8yWhrBfhn9OwM9WTyFtKJsSwbqdMKkp+1HkG5hKppctWknkkkVdD0O3oZOchxPE0XqSeTswbuQ3pJbYk/7MPEU41w0zOtQU3Mqn8fdhh+I+Ir7FH2D2R0xGY4a+DeUzLE5OlUo5Lk0MOkwqV1PdAc9tG8q/RvVY8je14a96Kqbwp7ffzxBjqk+DWlGfyjdYtKsAcc3B5V5x4HZ5mwpmRHlCZ0kB8ZKVyge/A75wpiJnG9hxzcRtWGdVrkCr11K08mrWcNYymnO6aEz5nWLPAT0p8e7Fd1zGOfVXxVydDB3rv/zRD0GomdTSMbevuRDb7j5LeRF+kP5R3glw72ftXebgf31DCUKTGfnOnEf+8lfbrVKoeQbDmu55sO9hj9a0gV/lb11kLdUnq6vgL1u5R/u0HHrCK+Iz5FRlcxK8Kt0jvuG7BbsDcGfkv/iBxqBGsT6irkzf7ZENYqS8gOiK4/FeF+buC9vfx9hXIXKdbElHImljuYeQ45lBlHofDsDP5JtQvUD1htxc59ztM7pD5ocRVNRScS/ATy/eh5ZM3mDLIU+yxyRij4D13/TvzDUjeQzcUY3+nWa+GfyOjShB86hQYmkLmWNQuPGx5Hst1U+D9A/WU86mDP039esYnMRQBrVDQxMf2shx1HRkXuG7KX6T/nWCHJpveRzCOGjKURy8MUOeWcaeUEqLqKziE+yPM1cYkjXKAp/EBwhPo20kD8OkZDY8ha8xxiap9FllC3IQrmTszfBH4I/KDLV8hsewOycL/DeGYF+CLwhwhfSkl8bghCfTRYz8XXrCMvpeUc9bNDIJ3jneQPphXjPXktPolv4kdSfKhwG+X/LUEngYv0PoyL659Cpivesy/R76fayO/yww5l3vKEV64jCeB2Q5YKMSfroGgoh7HPCQyNmnjzkii2ibK52GkkfG912ukA3yMd/k/QC+mDRKoU3r6o7jXldyHh+zKyf7+ETDIPIvnLFuxoE8p2/HPVoRynt1w7dLOi3hd9VAxM4Cpkn8qLWBZ+Dsl7ct+rHqb++fjIqKkp5UyMhvw44rdeI/8PTlaRuV5YGlmL4ipq2WyJ4ils8C0zSBb9AuXfql6gN/sf5EU24keRKIbKQ6I4jiSLdyHJ4mYkbFtbyR69CXwX+AtlCWCQoTRZzOJzI6SJiVXI2nPbRFFHuj1G/a45OPwgeLdTNJWalrdG06ScRUJ86pTZWvNDo6aJYig3kND+CP3fobYRdKj43BCMK0gNx3BtE/n/9BLKZWTR6zF6/w4nFxRKzX0o+HVdpu0RFtRzge5DvhicQ2bjnyCHCD5A9spPIgcU/ti9bu2Lt5Fh6Px/AM0CEQFu7BgNAAAAAElFTkSuQmCC" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +27,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>Buy & Bamp ;Sell Electronics</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +43,13 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/cc3f3bdf05.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
